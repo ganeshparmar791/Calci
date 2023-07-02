@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calci.css" />
+  </head>
+
+  <body>
+    <h1>Calculator</h1>
+
+    <table class="calculator" id="calci">
+      <tr id="result">
+        <td colspan="4"><input type="text" id="display-input" /></td>
+      </tr>
+
+      <tr>
+        <td colspan="1"><button class="special-button">C</button></td>
+        <td colspan="1"><button class="special-button">%</button></td>
+        <td colspan="1">
+          <button
+            id="backspace"
+            class="special-button"
+            onclick=" (function(){
+        var currentValue = input.value;
+        input.value = currentValue.slice(0, -1);
+      })();"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z"
+              />
+            </svg>
+          </button>
+        </td>
+        <td colspan="1"><button class="operator-button">/</button></td>
+      </tr>
+
+      <tr>
+        <td colspan="1"><button class="number-button">7</button></td>
+        <td colspan="1"><button class="number-button">8</button></td>
+        <td colspan="1"><button class="number-button">9</button></td>
+        <td colspan="1"><button class="operator-button">*</button></td>
+      </tr>
+
+      <tr>
+        <td colspan="1"><button class="number-button">4</button></td>
+        <td colspan="1"><button class="number-button">5</button></td>
+        <td colspan="1"><button class="number-button">6</button></td>
+        <td colspan="1"><button class="operator-button">-</button></td>
+      </tr>
+
+      <tr>
+        <td colspan="1"><button class="number-button">1</button></td>
+        <td colspan="1"><button class="number-button">2</button></td>
+        <td colspan="1"><button class="number-button">3</button></td>
+        <td colspan="1"><button class="operator-button">+</button></td>
+      </tr>
+
+      <tr>
+        <td colspan="1"><button class="number-button">00</button></td>
+        <td colspan="1"><button class="number-button">0</button></td>
+        <td colspan="1"><button class="number-button">.</button></td>
+        <td colspan="1"><button class="equals-button">=</button></td>
+      </tr>
+    </table>
+
+    <script src="calci.js"></script>
+  </body>
+</html>
